@@ -1,0 +1,26 @@
+# Python (app)
+app/__pycache__/
+app/.venv/
+app/*.egg-info/
+
+# Tofu / Terraform
+infra/tofu/.terraform/
+infra/tofu/.terraform.lock.hcl
+infra/tofu/*.tfstate*
+infra/tofu/*.tfvars
+!infra/tofu/*.tfvars.example
+
+# Grafana runtime
+infra/monitoring/grafana/data/
+
+# Env
+.env
+.env.local
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,4 @@
+hcloud_token = "SET_ME"
+project_name = "skilluv-starter"
+server_type  = "cpx11"
+location     = "nbg1"

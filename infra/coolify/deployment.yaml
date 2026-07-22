@@ -1,0 +1,17 @@
+# Reference Coolify "Docker Compose" application definition.
+#
+# In the Coolify UI you would create a resource of type "Docker Compose" and
+# paste this compose file (or point Coolify at this repository). Coolify then
+# builds the image, wires labels, and manages the deploy.
+
+version: "3.9"
+
+services:
+  app:
+    image: ghcr.io/skilluv-community/starter-devops-app:latest
+    restart: unless-stopped
+    labels:
+      caddy: app.${COOLIFY_FQDN}
+      caddy.reverse_proxy: "{{upstreams 8000}}"
+    environment:
+      LOG_LEVEL: info
